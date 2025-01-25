@@ -1,0 +1,295 @@
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F2FDFD;
+}
+
+/* Wrapper to hold background */
+.background-wrapper {
+  background-image: url('../image/about\ \(2\).jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative; /* Necessary for pseudo-element positioning */
+  overflow: hidden; /* Ensure the pseudo-element stays contained */
+}
+
+.background-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Adjust the RGBA value for the overlay effect */
+  z-index: 1; /* Place it below the content but above the background */
+}
+
+/* Ensuring content stays above the overlay */
+.background-wrapper > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Header Styles */
+.header-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px 0px 25px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative; /* Required for the pseudo-element */
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+
+
+nav ul li a:hover::after {
+    width: 100%; /* Make the line full width on hover */
+}
+
+
+/* Hero Section */
+
+.container-3 h1 {
+    font-size: 3rem;
+    margin-bottom: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.container-3 p {
+    padding: 0 14% 0 14%;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    color: #fff;
+}
+
+.container-3 button {
+    background-color: #5454C9;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.container-3 button:hover {
+    transform: scale(1.1);
+}
+/*about*/
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.profile-container {
+    display: flex;
+    gap: 20%;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0px 50px 0px 120px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.profile-image img {
+    width: 300px;
+    height:300px;
+    object-fit: cover;
+}
+
+.profile-details {
+    flex: 1;
+}
+
+.profile-details h3 {
+    margin: 0;
+    padding-top: 6%;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.profile-details p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.profile-details hr {
+    margin: 10px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons i {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.social-icons i:hover {
+    color: #007bff;
+}
+.about{
+    
+        margin: 0;
+        font-size: 2rem;
+        color: #333;
+        padding: 20% 0; /* 10% padding on top and bottom */
+ }
+ .about-me-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.about-container {
+    display: flex;
+    gap: 20%;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0px 120px 0px 50px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.about-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    float: left; /* Align image to the left */
+}
+
+.about-details {
+    flex: 1;
+}
+
+.about-details h3 {
+    margin: 0;
+    padding-top: 6%;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.about-details p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.about-details hr {
+    margin: 10px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+.social-icons {
+    margin-top: 10px;
+    
+}
+
+.social-icons i {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.social-icons i:hover {
+    color: #007bff;
+    
+}
+/*footer*/
+
+footer {
+    background-color: #212529;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+  }
+  
+  .footer-container p {
+    margin: 10px 0;
+  }
+  
+  .social-links a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .social-links a:hover {
+    color: #5454C9;
+  }
+  
+  footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  
+  
+  
